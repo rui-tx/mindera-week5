@@ -1,6 +1,4 @@
-import todoapp.TodoList;
-
-import java.util.Iterator;
+package todoapp;
 
 public class Main {
     public static void main(String[] args) {

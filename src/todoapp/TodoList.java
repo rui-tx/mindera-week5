@@ -20,6 +20,10 @@ public class TodoList {
     }
 
     public void removeTask(TodoItem todo) {
+        if(!this.list.contains(todo)) {
+            return;
+        }
+
         this.list.remove(todo);
     }
 
