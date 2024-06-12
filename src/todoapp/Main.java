@@ -1,5 +1,7 @@
 package todoapp;
 
+import util.Notification;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -36,13 +38,19 @@ public class Main {
         list.markTaskIncomplete(todo3);
          */
 
+
         list.addTask("walk the dog", "", false, 10);
         list.addTask("buy groceries", "", false, 200);
         list.addTask("take out the trash", "", false, 20);
         list.addTask("take out the trash", "", false, 20);
 
-        list.removeTask(2);
-        list.removeTask(2);
+        try {
+            list.removeTask(2);
+            list.removeTask(2);
+        } catch (Exception e) {
+            Notification.send("Error: " + e);
+            System.out.println("Can't find todo with that id.");
+        }
 
         System.out.println("tasks by priority");
         list.printAllTasks();
@@ -61,6 +69,5 @@ public class Main {
             list.getCompleteTasks()[i].print();
             System.out.println();
         }
-
     }
 }

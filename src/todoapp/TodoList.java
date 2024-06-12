@@ -1,9 +1,6 @@
 package todoapp;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class TodoList {
 
@@ -40,8 +37,7 @@ public class TodoList {
     public void removeTask(int id) {
         TodoItem todoToDelete = getTodoWithId(id);
         if (todoToDelete == null) {
-            System.out.println("Can't find todo with that id.");
-            return;
+            throw new NoSuchElementException();
         }
 
         this.list.remove(todoToDelete);

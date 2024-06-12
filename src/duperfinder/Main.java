@@ -1,5 +1,7 @@
 package duperfinder;
 
+import util.Notification;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +22,7 @@ public class Main {
         DuperFinder<Fruit> dupeFinder = new DuperFinder<>(fruitList);
 
         System.out.println("number of duplicates: " + dupeFinder.checkDupes());
+        Notification.send("number of duplicates: ", dupeFinder.checkDupes() + "");
 
         //List<Fruit> dupes = dupeFinder.getDupes();
         List<Fruit> dupes = dupeFinder.sortedDupes();
