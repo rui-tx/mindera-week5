@@ -5,6 +5,7 @@ public class Main {
 
         TodoList list = new TodoList("test");
 
+        /*
         TodoList.TodoItem todo1 = new TodoList.TodoItem(
                 "walk the dog",
                 "",
@@ -22,22 +23,32 @@ public class Main {
                 "",
                 false,
                 20);
-
-        list.addTask(todo1);
+                        list.addTask(todo1);
         list.addTask(todo2);
         list.addTask(todo3);
         list.addTask(todo3);
+
+        //list.removeTask(0);
         list.removeTask(todo3);
 
         list.markTaskComplete(todo1);
         list.markTaskComplete(todo3);
         list.markTaskIncomplete(todo3);
+         */
 
-        System.out.println("tasks");
+        list.addTask("walk the dog", "", false, 10);
+        list.addTask("buy groceries", "", false, 200);
+        list.addTask("take out the trash", "", false, 20);
+        list.addTask("take out the trash", "", false, 20);
+
+        list.removeTask(2);
+        list.removeTask(2);
+
+        System.out.println("tasks by priority");
         list.printAllTasks();
 
         System.out.printf("next highest todo\n");
-        list.getNext().print();
+        list.printNext();
 
         System.out.println("incompleted tasks");
         for (int i = 0; i < list.getIncompleteTasks().length; i++) {
