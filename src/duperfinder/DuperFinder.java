@@ -40,19 +40,7 @@ public class DuperFinder<T extends Comparable<T>> {
     public List<T> sortedDupes() {
         List<T> dupedList = this.getDupes();
 
-        /*
-        dupedList.sort(new Comparator<T>() {
-            @Override
-            public int compare(T o1, T o2) {
-                return -1;
-            }
-        });
-
-         */
-        //dupedList.sort
-
         dupedList.sort(Comparator.reverseOrder());
-
         return dupedList;
     }
 }
