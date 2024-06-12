@@ -2,7 +2,7 @@ package duperfinder;
 
 import java.util.*;
 
-public class DuperFinder<T> {
+public class DuperFinder<T extends Comparable<T>> {
 
     private List<T> list;
 
@@ -11,7 +11,7 @@ public class DuperFinder<T> {
     }
 
     public int checkDupes(){
-        Collection<T> temp = new HashSet<>();
+        Set<T> temp = new HashSet<>();
         Iterator<T> iterator = this.list.iterator();
 
         while(iterator.hasNext()) {
@@ -23,6 +23,7 @@ public class DuperFinder<T> {
 
     public List<T> getDupes() {
         Iterator<T> iterator = this.list.iterator();
+
         List<T> dupedList = new ArrayList<>();
         Set<T> temp = new HashSet<>();
 
@@ -39,12 +40,18 @@ public class DuperFinder<T> {
     public List<T> sortedDupes() {
         List<T> dupedList = this.getDupes();
 
+        /*
         dupedList.sort(new Comparator<T>() {
             @Override
             public int compare(T o1, T o2) {
                 return -1;
             }
         });
+
+         */
+        //dupedList.sort
+
+        dupedList.sort(Comparator.reverseOrder());
 
         return dupedList;
     }

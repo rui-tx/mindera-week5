@@ -10,7 +10,8 @@ public class Main {
         fruitList.add(new Apple(1));
         fruitList.add(new Apple(1));
         fruitList.add(new Apple(2));
-        fruitList.add(new Orange(1));
+        fruitList.add(new Orange(3));
+        fruitList.add(new Orange(3));
         fruitList.add(new Orange(1));
         fruitList.add(new Orange(2));
         fruitList.add(new Orange(2));
