@@ -22,7 +22,7 @@ public class Main {
         DuperFinder<Fruit> dupeFinder = new DuperFinder<>(fruitList);
 
         System.out.println("number of duplicates: " + dupeFinder.checkDupes());
-        Notification.send("number of duplicates: ", dupeFinder.checkDupes() + "");
+        Notification.send("Number of duplicates fruits: ", dupeFinder.checkDupes() + "");
 
         //List<Fruit> dupes = dupeFinder.getDupes();
         List<Fruit> dupes = dupeFinder.sortedDupes();
